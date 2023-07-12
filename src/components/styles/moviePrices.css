@@ -1,0 +1,58 @@
+.movie-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  background-color: #648381;
+  border-radius: 50px;
+}
+
+.movie-price-container h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffbf46;
+  font-size: 32px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.movie-price-details-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.movie-price-details-container li {
+  list-style: none;
+  color: #e4fde1;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 8px 8px 8px 0px;
+}
+
+.movie-price-details-container p {
+  color: #8acb88;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.movie-price-ticket {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-price-ticket a {
+  text-decoration: none;
+  font-size: 20px;
+  margin-bottom: 5px;
+  background-color: #ffbf46;
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.movie-price-ticket a:hover {
+  background-color: #8acb88;
+}
