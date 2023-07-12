@@ -1,9 +1,12 @@
 import "./styles/movieDetails.css";
+import StarIcon from "@mui/icons-material/Star";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 import MoviePrices from "./MoviePrices";
 import { useState } from "react";
 
 const MovieDetails = () => {
   const [price, setPrice] = useState(false);
+  const [rating, setRating] = useState(1);
 
   return (
     <div className="movie-details-container">
@@ -12,7 +15,13 @@ const MovieDetails = () => {
         <div className="movie-details-text-container">
           <div className="movie-details-title-ratings">
             <h1>FILM TITLE</h1>
-            <p>Ratings</p>
+            <div>
+              {rating > 0 ? <StarIcon /> : <StarBorderIcon />}
+              {rating > 1 ? <StarIcon /> : <StarBorderIcon />}
+              {rating > 2 ? <StarIcon /> : <StarBorderIcon />}
+              {rating > 3 ? <StarIcon /> : <StarBorderIcon />}
+              {rating > 4 ? <StarIcon /> : <StarBorderIcon />}
+            </div>
           </div>
           <div className="movie-details-category-container">
             <p className="movie-details-category">Category:</p>

@@ -92,3 +92,8 @@
   color: #e4fde1;
   font-size: 20px;
 }
+
+.movie-details-title-ratings .MuiSvgIcon-root {
+  color: #ffbf46;
+  font-size: 36px;
+}
