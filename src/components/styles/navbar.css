@@ -1,0 +1,19 @@
+.navbar {
+    background-color: #648381;
+}
+
+@media (min-width: 1200px) {
+    .navbar .container {
+        max-width: 1800px;
+    }
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.navbar .nav-link {
+    color: #fff;
+    font-size: 20px;
+
+}
