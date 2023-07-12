@@ -56,14 +56,26 @@ const Footer = () => {
         <div className="footer-social-media">
           <h3>Social media</h3>
           <div className="footer-sm-div-one">
-            <FacebookIcon />
-            <InstagramIcon />
-            <TwitterIcon />
+            <a href="#">
+              <FacebookIcon />
+            </a>
+            <a href="">
+              <InstagramIcon />
+            </a>
+            <a href="">
+              <TwitterIcon />
+            </a>
           </div>
           <div className="footer-sm-div-two">
-            <YouTubeIcon />
-            <PinterestIcon />
-            <GitHubIcon />
+            <a href="">
+              <YouTubeIcon />
+            </a>
+            <a href="">
+              <PinterestIcon />
+            </a>
+            <a href="">
+              <GitHubIcon />
+            </a>
           </div>
         </div>
       </div>
