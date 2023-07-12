@@ -2,6 +2,22 @@
     background-color: #648381;
 }
 
+#logo-text {
+    font-variant: small-caps;
+    color: #fff;
+    padding-left: 0.5rem;
+    font-weight: bold;
+    justify-self: center;
+    margin: 0;
+
+}
+
+.navbar-brand {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
 @media (min-width: 1200px) {
     .navbar .container {
         max-width: 1800px;
