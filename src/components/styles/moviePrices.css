@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
+  background-color: #648381;
+  border-radius: 50px;
 }
 
 .movie-price-container h2 {
@@ -17,6 +19,7 @@
   display: flex;
   justify-content: space-around;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .movie-price-details-container li {
@@ -24,7 +27,7 @@
   color: #e4fde1;
   font-size: 20px;
   margin-bottom: 5px;
-  padding: 8px;
+  padding: 8px 8px 8px 0px;
 }
 
 .movie-price-details-container p {

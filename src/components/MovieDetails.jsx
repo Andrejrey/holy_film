@@ -39,6 +39,11 @@ const MovieDetails = () => {
           </p>
           <button onClick={() => setPrice(!price)}>See prices</button>
         </div>
+        <img
+          className="footer-holy-movie-logo"
+          src="src\components\images\holymovie.svg"
+          alt="logo"
+        />
       </div>
       {price && <MoviePrices />}
     </div>
