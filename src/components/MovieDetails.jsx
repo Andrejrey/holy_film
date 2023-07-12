@@ -4,10 +4,8 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import MoviePrices from "./MoviePrices";
 import { useState } from "react";
 
-const MovieDetails = () => {
+const MovieDetails = ({ rating }) => {
   const [price, setPrice] = useState(false);
-  const [rating, setRating] = useState(1);
-
   return (
     <div className="movie-details-container">
       <div className="movie-details-description-container">
