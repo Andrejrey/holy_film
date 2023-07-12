@@ -9,8 +9,12 @@ import PinterestIcon from "@mui/icons-material/Pinterest";
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-logo">HOLY FILM</div>
       <div className="footer-links-container">
+        <img
+          className="footer-holy-movie-logo"
+          src="src\components\images\holymovie.svg"
+          alt="logo"
+        />
         <div className="footer-about-us">
           <h3>About us</h3>
           <ul>
@@ -79,7 +83,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p>(c) 2023 Holy Film Gmgh + CO. KG</p>
+      <p>© 2023 Holy Film Gmgh + CO. KG</p>
     </footer>
   );
 };
