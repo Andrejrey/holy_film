@@ -1,5 +1,4 @@
 // Import packages
-import { Home } from "@mui/icons-material";
 import { Routes, Route } from "react-router-dom";
 
 // Import components

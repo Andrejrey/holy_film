@@ -1,7 +1,10 @@
+import "./styles/header.css";
+
 const Header = () => {
   return (
-    <div>
-      <h1>Header</h1>
+    <div id="headerContainer">
+      <h1>Holy Film</h1>
+      <p>Discover the best films here!</p>
     </div>
   );
 };
