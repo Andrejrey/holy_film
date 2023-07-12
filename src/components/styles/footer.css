@@ -27,12 +27,14 @@ footer {
   list-style: none;
   margin-bottom: 5px;
   text-align: center;
+  padding: 5px;
 }
 
 .footer-links-container a {
   text-decoration: none;
   color: #e4fde1;
   font-size: 18px;
+  padding: 5px;
 }
 
 .footer-links-container a:hover {
