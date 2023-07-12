@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer-links-container">
         <img
           className="footer-holy-movie-logo"
-          src="src\components\images\holymovie.svg"
+          src="src\images\holymovie.svg"
           alt="logo"
         />
         <div className="footer-about-us">

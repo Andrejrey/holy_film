@@ -4,14 +4,12 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import MoviePrices from "./MoviePrices";
 import { useState } from "react";
 
-const MovieDetails = () => {
+const MovieDetails = ({ rating }) => {
   const [price, setPrice] = useState(false);
-  const [rating, setRating] = useState(1);
-
   return (
     <div className="movie-details-container">
       <div className="movie-details-description-container">
-        <img src="src\components\images\ant_man_ver5.jpg" alt="" />
+        <img src="src\images\ant_man_ver5.jpg" alt="" />
         <div className="movie-details-text-container">
           <div className="movie-details-title-ratings">
             <h1>FILM TITLE</h1>
@@ -41,7 +39,7 @@ const MovieDetails = () => {
         </div>
         <img
           className="footer-holy-movie-logo"
-          src="src\components\images\holymovie.svg"
+          src="src\images\holymovie.svg"
           alt="logo"
         />
       </div>
