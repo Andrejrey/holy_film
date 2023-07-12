@@ -1,11 +1,17 @@
+// Import components
 import NewMovieCard from "./NewMovieCard";
 
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
-import "swiper/css";
-import { Navigation } from "swiper/modules";
-import "swiper/css/navigation";
+import { Navigation, Pagination } from "swiper/modules";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// Import styles
 import "./styles/newMovies.css";
 
 SwiperCore.use(Navigation);
@@ -42,18 +48,19 @@ const NewMovies = () => {
   ];
 
   // If there are no slides to display, then do not render the component
-  if (!Array.isArray(movieList) || !movieList.length) {
-    return null;
-  }
+  // if (!Array.isArray(movieList) || !movieList.length) {
+  //   return null;
+  // }
 
   return (
     <div id="sectionNew" className="carousel">
       <h2 id="newMovies">New Movies</h2>
       <Swiper
-        // spaceBetween={1}
-        slidesPerView={1}
-        // onSlideChange={() => console.log("slide change")}
-        // onSwiper={(swiper) => console.log(swiper)}
+        modules={[Navigation, Pagination]}
+        spaceBetween={0}
+        slidesPerView="auto"
+        navigation
+        pagination
       >
         {movieList.map((movie) => {
           return (

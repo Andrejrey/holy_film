@@ -5,7 +5,7 @@ const NewMovieCard = ({ title, publicationDate, genre, image }) => {
       <h3>{title}</h3>
       <p>Erscheinungsdatum: {publicationDate}</p>
       <p>Genre: {genre}</p>
-      <button>More information</button>
+      <button>Mehr erfahren</button>
     </div>
   );
 };
