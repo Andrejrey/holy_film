@@ -35,6 +35,10 @@ footer {
   font-size: 18px;
 }
 
+.footer-links-container a:hover {
+  color: #ffbf46;
+}
+
 footer p {
   text-align: center;
   color: #8acb88;
@@ -45,6 +49,10 @@ footer p {
 
 .footer-social-media .MuiSvgIcon-root {
   color: #e4fde1;
+}
+
+.footer-social-media .MuiSvgIcon-root:hover {
+  color: #ffbf46;
 }
 
 .footer-sm-div-one {
