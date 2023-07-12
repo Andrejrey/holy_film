@@ -1,7 +1,11 @@
-const NewMovieCard = () => {
+const NewMovieCard = ({ title, publicationDate, genre, image }) => {
   return (
-    <div>
-      <h1>New Movie Card</h1>
+    <div className="carouselItem">
+      <img src={image} alt="Poster of the Movie" />
+      <h3>{title}</h3>
+      <p>Erscheinungsdatum: {publicationDate}</p>
+      <p>Genre: {genre}</p>
+      <button>More information</button>
     </div>
   );
 };
