@@ -3,7 +3,7 @@ import "./styles/moviePrices.css";
 const MoviePrices = () => {
   return (
     <div className="movie-price-container">
-      <h2>Where i can watch this movie</h2>
+      <h2>Where i can watch this movie?</h2>
       <div className="movie-price-details-container">
         <div>
           <p>Where?</p>
