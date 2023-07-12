@@ -2,16 +2,14 @@ footer {
   background-color: #575761;
 }
 
-.footer-logo {
-  color: #ffbf46;
-  font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding-top: 30px;
-  margin: 0px 30px 30px 30px;
+.footer-holy-movie-logo {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: 160px;
 }
 
 .footer-links-container {
+  padding-top: 50px;
   display: flex;
   justify-content: space-around;
 }
@@ -45,7 +43,7 @@ footer p {
   text-align: center;
   color: #8acb88;
   font-size: 18px;
-  margin-top: 30px;
+  margin-top: 50px;
   padding-bottom: 10px;
 }
 
