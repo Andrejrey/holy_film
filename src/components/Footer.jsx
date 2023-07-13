@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p>© 2023 Holy Film Gmgh + CO. KG</p>
+      <p id="copyright">© 2023 Holy Film Gmgh + CO. KG</p>
     </footer>
   );
 };
