@@ -26,7 +26,6 @@ const NewMovies = ({ data }) => {
       </h2>
       <swiper-container>
         {data.map((d) => {
-          console.log(d);
           return (
             <swiper-slide
               key={d.sys.id}
@@ -38,7 +37,6 @@ const NewMovies = ({ data }) => {
               }}
             >
               <NewMovieCard
-                key={d.fields.id}
                 title={d.fields.title}
                 publicationDate={d.fields.publicationDate}
                 genre={d.fields.genre}
@@ -48,7 +46,6 @@ const NewMovies = ({ data }) => {
               />
               {movie && (
                 <MovieDetails
-                  key={d.fields.id}
                   title={d.fields.title}
                   rating={d.fields.rating}
                   genre={d.fields.genre}
