@@ -11,7 +11,7 @@ const NewMovies = ({ data }) => {
   const [movie, setMovie] = useState(false);
 
   return (
-    <div id="sectionNew">
+    <div style={{ marginBottom: "2rem" }}>
       <h2
         id="newMovies"
         style={{
@@ -26,12 +26,19 @@ const NewMovies = ({ data }) => {
       </h2>
       <swiper-container>
         {data.map((d) => {
+          console.log(d);
           return (
             <swiper-slide
               key={d.sys.id}
-              style={{ display: "flex", justifyContent: "center" }}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
               <NewMovieCard
+                key={d.fields.id}
                 title={d.fields.title}
                 publicationDate={d.fields.publicationDate}
                 genre={d.fields.genre}
@@ -39,11 +46,21 @@ const NewMovies = ({ data }) => {
                 movie={movie}
                 setMovie={setMovie}
               />
+              {movie && (
+                <MovieDetails
+                  key={d.fields.id}
+                  title={d.fields.title}
+                  rating={d.fields.rating}
+                  genre={d.fields.genre}
+                  description={d.fields.description}
+                  image={d.fields.image.fields.file.url}
+                  imageName={d.fields.image.fields.title}
+                />
+              )}
             </swiper-slide>
           );
         })}
       </swiper-container>
-      {movie && <MovieDetails />}
     </div>
   );
 };
