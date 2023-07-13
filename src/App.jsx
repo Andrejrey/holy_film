@@ -24,17 +24,16 @@ function App() {
       setLoading(false);
     });
   }, []);
-  console.log(posts);
 
   return (
     <>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Header />} />
-        <Route path="/movieprices" element={<MoviePrices />} />
-      </Routes>
-      <NewMovies />
-      <Categories rating={rating} />
+      <Header />
+      <NewMovies data={posts} />
+      {/* <Routes>
+        <Route path="/{prodURL}" element={<MoviePrices />} />
+      </Routes> */}
+      {/* <Categories rating={rating} /> */}
       <Footer />
     </>
   );
