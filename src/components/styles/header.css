@@ -1,4 +1,36 @@
 #headerContainer {
-  height: 80vh;
-  background-image: url("src\images\header-image.jpg");
+  height: 70vh;
+  background-image: url("src/images/header-image-desktop.jpg");
+  background-size: cover;
+  background-position: right 50% bottom 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+}
+
+#headerContainer p {
+  color: white;
+  font-style: oblique;
+  font-size: 1.75rem;
+  margin-right: 2rem;
+}
+
+#headerTitle {
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#headerTitle img {
+  width: 80px;
+  height: 80px;
+  margin-right: 0.8rem;
+}
+
+#headerTitle h1 {
+  color: white;
+  font-size: 4.5rem;
+  font-variant: small-caps;
 }
