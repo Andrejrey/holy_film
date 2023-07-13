@@ -1,12 +1,12 @@
 import CategoriesMovieCard from "./CategoriesMovieCard";
 import MovieDetails from "./MovieDetails";
 
-const Categories = () => {
+const Categories = ({ rating }) => {
   return (
     <div>
       <h1>Categories</h1>
       <CategoriesMovieCard />
-      <MovieDetails />
+      <MovieDetails rating={rating} />
     </div>
   );
 };
