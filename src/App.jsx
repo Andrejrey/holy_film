@@ -24,7 +24,6 @@ function App() {
       setLoading(false);
     });
   }, []);
-  console.log(posts);
 
   return (
     <>
@@ -33,7 +32,7 @@ function App() {
         <Route path="/" element={<Header />} />
         <Route path="/movieprices" element={<MoviePrices />} />
       </Routes>
-      <NewMovies />
+      <NewMovies data={posts} />
       <Categories rating={rating} />
       <Footer />
     </>
