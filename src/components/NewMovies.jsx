@@ -1,47 +1,49 @@
+import { useState } from "react";
 // Import components
 import NewMovieCard from "./NewMovieCard";
-
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore from "swiper";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-// Import styles
-import "./styles/newMovies.css";
-
-SwiperCore.use(Navigation);
+import MovieDetails from "./MovieDetails";
+// import function to register Swiper custom elements
+import { register } from "swiper/element/bundle";
+// register Swiper custom elements
+register();
 
 const NewMovies = ({ data }) => {
+  const [movie, setMovie] = useState(false);
+
   return (
-    <div id="sectionNew" className="carousel">
-      <h2 id="newMovies">New Movies</h2>
-      <Swiper
-        // cssMode={true}
-        navigation={true}
-        pagination={true}
-        modules={[Navigation, Pagination]}
-        spaceBetween={0}
-        slidesPerView={data.length}
-        className="mySwiper"
+    <div id="sectionNew">
+      <h2
+        id="newMovies"
+        style={{
+          textAlign: "center",
+          color: "#575761",
+          fontSize: "2rem",
+          fontWeight: "bold",
+          margin: "3rem 0rem 1rem 0rem",
+        }}
       >
+        New Movies
+      </h2>
+      <swiper-container>
         {data.map((d) => {
           return (
-            <SwiperSlide key={d.sys.id}>
+            <swiper-slide
+              key={d.sys.id}
+              style={{ display: "flex", justifyContent: "center" }}
+            >
               <NewMovieCard
                 title={d.fields.title}
                 publicationDate={d.fields.publicationDate}
                 genre={d.fields.genre}
                 image={d.fields.image.fields.file.url}
+                movie={movie}
+                setMovie={setMovie}
               />
-            </SwiperSlide>
+            </swiper-slide>
           );
         })}
-      </Swiper>
+      </swiper-container>
+      {movie && <MovieDetails />}
     </div>
   );
 };

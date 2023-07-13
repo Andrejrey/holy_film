@@ -28,12 +28,12 @@ function App() {
   return (
     <>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Header />} />
-        <Route path="/movieprices" element={<MoviePrices />} />
-      </Routes>
+      <Header />
       <NewMovies data={posts} />
-      <Categories rating={rating} />
+      {/* <Routes>
+        <Route path="/{prodURL}" element={<MoviePrices />} />
+      </Routes> */}
+      {/* <Categories rating={rating} /> */}
       <Footer />
     </>
   );
