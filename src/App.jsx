@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { getCampaigns } from "./client";
+import MovieDetails from "./components/MovieDetails";
 const promise = getCampaigns();
 
 function App() {
@@ -33,7 +34,8 @@ function App() {
       {/* <Routes>
         <Route path="/{prodURL}" element={<MoviePrices />} />
       </Routes> */}
-      <Categories data={posts} />
+
+      <Categories data={posts} rating={rating} />
       <Footer />
     </>
   );

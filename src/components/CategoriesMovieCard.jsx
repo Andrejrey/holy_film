@@ -1,3 +1,7 @@
+import "./styles/categoriesMovieCard.css";
+import StarIcon from "@mui/icons-material/Star";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
+
 const CategoriesMovieCard = ({
   title,
   publicationDate,
@@ -7,41 +11,19 @@ const CategoriesMovieCard = ({
   displayShowDetails,
   displayGenres,
   setMovie,
+  rating,
 }) => {
   return (
-    <div
-      style={{
-        width: "200px",
-        backgroundColor: "#575761",
-        border: "none",
-        borderRadius: "20px",
-        boxShadow: "7px 7px 10px 0px rgba(87, 87, 87, 0.75)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        marginBottom: "1rem",
-      }}
-    >
-      <img
-        src={image}
-        alt="Poster of the Movie"
-        className="carImage"
-        style={{
-          width: "200px",
-          heigth: "300px",
-          borderRadius: "20px 20px 0px 0px",
-        }}
-      />
-      <h3
-        style={{
-          color: "white",
-          textAlign: "center",
-          fontSize: "0.8rem",
-          margin: "0.5rem 0rem",
-        }}
-      >
-        {title}
-      </h3>
+    <div className="movie-container">
+      <img src={image} alt="Poster of the Movie" className="posterImage" />
+      <h3 className="movie-title">{title}</h3>
+      <div>
+        {rating > 0 ? <StarIcon /> : <StarBorderIcon />}
+        {rating > 1 ? <StarIcon /> : <StarBorderIcon />}
+        {rating > 2 ? <StarIcon /> : <StarBorderIcon />}
+        {rating > 3 ? <StarIcon /> : <StarBorderIcon />}
+        {rating > 4 ? <StarIcon /> : <StarBorderIcon />}
+      </div>
     </div>
   );
 };
