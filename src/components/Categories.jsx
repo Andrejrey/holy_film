@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import MovieDetails from "./MovieDetails";
-import NewMovieCard from "./NewMovieCard";
+import CategoriesMovieCard from "./CategoriesMovieCard";
 
 const Categories = ({ data }) => {
   const [movie, setMovie] = useState(false);
@@ -58,7 +58,7 @@ const Categories = ({ data }) => {
           >
             {movies.map((movie) => (
               <div key={movie.sys.id}>
-                <NewMovieCard
+                <CategoriesMovieCard
                   title={movie.fields.title}
                   publicationDate={movie.fields.publicationDate}
                   genre={movie.fields.genre}
