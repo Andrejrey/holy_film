@@ -4,6 +4,8 @@ const NewMovieCard = ({
   genre,
   image,
   movie,
+  displayShowDetails,
+  displayGenres,
   setMovie,
 }) => {
   return (
@@ -50,35 +52,39 @@ const NewMovieCard = ({
       >
         Erscheinungsdatum: {publicationDate}
       </p>
-      <p
-        style={{
-          color: "white",
-          fontSize: "1rem",
-          textAlign: "center",
-          marginBottom: "0.25rem",
-          display: "flex",
-          flexWrap: "wrap",
-        }}
-      >
-        Genre: {genre.map((g) => g).join(", ")}
-      </p>
-      <button
-        style={{
-          width: "fit-content",
-          fontWeight: "bold",
-          fontSize: "1rem",
-          border: "none",
-          borderRadius: "10px",
-          backgroundColor: "#ffbf46",
-          color: "white",
-          padding: "6px 12px",
-          cursor: "pointer",
-          margin: "1rem 0rem",
-        }}
-        onClick={() => setMovie(!movie)}
-      >
-        Mehr erfahren
-      </button>
+      {displayGenres && (
+        <p
+          style={{
+            color: "white",
+            fontSize: "1rem",
+            textAlign: "center",
+            marginBottom: "0.25rem",
+            display: "flex",
+            flexWrap: "wrap",
+          }}
+        >
+          Genre: {genre.map((g) => g).join(", ")}
+        </p>
+      )}
+      {displayShowDetails && (
+        <button
+          style={{
+            width: "fit-content",
+            fontWeight: "bold",
+            fontSize: "1rem",
+            border: "none",
+            borderRadius: "10px",
+            backgroundColor: "#ffbf46",
+            color: "white",
+            padding: "6px 12px",
+            cursor: "pointer",
+            margin: "1rem 0rem",
+          }}
+          onClick={() => setMovie(!movie)}
+        >
+          Mehr erfahren
+        </button>
+      )}
     </div>
   );
 };

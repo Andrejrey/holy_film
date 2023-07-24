@@ -2,6 +2,7 @@ import { useState } from "react";
 // Import components
 import NewMovieCard from "./NewMovieCard";
 import MovieDetails from "./MovieDetails";
+import Categories from "./Categories";
 // import function to register Swiper custom elements
 import { register } from "swiper/element/bundle";
 // register Swiper custom elements
@@ -42,6 +43,7 @@ const NewMovies = ({ data }) => {
                 genre={d.fields.genre}
                 image={d.fields.image.fields.file.url}
                 movie={movie}
+                displayShowDetails={true}
                 setMovie={setMovie}
               />
               {movie && (

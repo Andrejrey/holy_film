@@ -33,7 +33,7 @@ function App() {
       {/* <Routes>
         <Route path="/{prodURL}" element={<MoviePrices />} />
       </Routes> */}
-      {/* <Categories rating={rating} /> */}
+      <Categories data={posts} />
       <Footer />
     </>
   );
