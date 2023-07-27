@@ -3,7 +3,7 @@ import "./styles/categories.css";
 
 import CategoriesMovieCard from "./CategoriesMovieCard";
 
-const Categories = ({ data, rating }) => {
+const Categories = ({ data }) => {
   const [movie, setMovie] = useState(false);
 
   // Group movies by genre
@@ -35,7 +35,7 @@ const Categories = ({ data, rating }) => {
                     image={movie.fields.image.fields.file.url}
                     movie={movie}
                     setMovie={setMovie}
-                    rating={rating}
+                    rating={movie.fields.rating}
                   />
                 </div>
               ))}
