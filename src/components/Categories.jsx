@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./styles/categories.css";
-
+import MovieDetails from "./MovieDetails";
 import CategoriesMovieCard from "./CategoriesMovieCard";
 
 const Categories = ({ data, rating }) => {
@@ -35,7 +35,7 @@ const Categories = ({ data, rating }) => {
                     image={movie.fields.image.fields.file.url}
                     movie={movie}
                     setMovie={setMovie}
-                    rating={rating}
+                    rating={movie.fields.rating}
                   />
                 </div>
               ))}

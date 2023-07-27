@@ -1,4 +1,5 @@
 import "./styles/categoriesMovieCard.css";
+import MovieDetails from "./MovieDetails";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 
