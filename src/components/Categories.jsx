@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./styles/categories.css";
-import MovieDetails from "./MovieDetails";
+
 import CategoriesMovieCard from "./CategoriesMovieCard";
 
 const Categories = ({ data, rating }) => {
@@ -20,30 +20,29 @@ const Categories = ({ data, rating }) => {
   }, {});
 
   return (
-    <div className="categories-container">
-      <h2 id="categories">Categories</h2>
-      {Object.entries(groupedMovies).map(([genre, movies]) => (
-        <div key={genre}>
-          <h3 className="genre-heading">{genre}</h3>
-          <div className="movies-container">
-            {movies.map((movie) => (
-              <div key={movie.sys.id}>
-                <CategoriesMovieCard
-                  title={movie.fields.title}
-                  publicationDate={movie.fields.publicationDate}
-                  genre={movie.fields.genre}
-                  image={movie.fields.image.fields.file.url}
-                  movie={movie}
-                  displayShowDetails={false}
-                  displayGenres={false}
-                  setMovie={setMovie}
-                  rating={rating}
-                />
-              </div>
-            ))}
+    <div className="all-container">
+      <div className="categories-container">
+        <h2 id="categories">Categories</h2>
+        {Object.entries(groupedMovies).map(([genre, movies]) => (
+          <div key={genre}>
+            <h3 className="genre-heading">{genre}</h3>
+            <div className="movies-container">
+              {movies.map((movie) => (
+                <div key={movie.sys.id}>
+                  <CategoriesMovieCard
+                    title={movie.fields.title}
+                    genre={movie.fields.genre}
+                    image={movie.fields.image.fields.file.url}
+                    movie={movie}
+                    setMovie={setMovie}
+                    rating={rating}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

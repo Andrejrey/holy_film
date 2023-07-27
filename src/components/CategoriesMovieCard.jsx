@@ -2,17 +2,7 @@ import "./styles/categoriesMovieCard.css";
 import StarIcon from "@mui/icons-material/Star";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 
-const CategoriesMovieCard = ({
-  title,
-  publicationDate,
-  genre,
-  image,
-  movie,
-  displayShowDetails,
-  displayGenres,
-  setMovie,
-  rating,
-}) => {
+const CategoriesMovieCard = ({ title, image, rating }) => {
   return (
     <div className="movie-container">
       <img src={image} alt="Poster of the Movie" className="posterImage" />
