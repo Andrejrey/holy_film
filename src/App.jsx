@@ -11,6 +11,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { getCampaigns } from "./client";
+import MovieDetails from "./components/MovieDetails";
 const promise = getCampaigns();
 
 function App() {
@@ -24,17 +25,17 @@ function App() {
       setLoading(false);
     });
   }, []);
-  console.log(posts);
 
   return (
     <>
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Header />} />
-        <Route path="/movieprices" element={<MoviePrices />} />
-      </Routes>
-      <NewMovies />
-      <Categories rating={rating} />
+      <Header />
+      <NewMovies data={posts} />
+      {/* <Routes>
+        <Route path="/{prodURL}" element={<MoviePrices />} />
+      </Routes> */}
+
+      <Categories data={posts} rating={rating} />
       <Footer />
     </>
   );
