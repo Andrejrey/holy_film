@@ -2,7 +2,6 @@ import { useState } from "react";
 // Import components
 import NewMovieCard from "./NewMovieCard";
 import MovieDetails from "./MovieDetails";
-import Categories from "./Categories";
 // import function to register Swiper custom elements
 import { register } from "swiper/element/bundle";
 // register Swiper custom elements
