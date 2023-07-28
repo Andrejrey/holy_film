@@ -7,11 +7,11 @@ import { register } from "swiper/element/bundle";
 // register Swiper custom elements
 register();
 
-const NewMovies = ({ data }) => {
+const NewMovies = ({ movies }) => {
   const [movie, setMovie] = useState(false);
 
   return (
-    <div style={{ marginBottom: "2rem" }}>
+    <div id="newMovies-container" style={{ marginBottom: "2rem" }}>
       <h2
         id="newMovies"
         style={{
@@ -22,42 +22,43 @@ const NewMovies = ({ data }) => {
           margin: "3rem 0rem 1rem 0rem",
         }}
       >
-        New Movies
+        Neue Filme
       </h2>
       <swiper-container>
-        {data.map((d) => {
-          return (
-            <swiper-slide
-              key={d.sys.id}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <NewMovieCard
-                title={d.fields.title}
-                publicationDate={d.fields.publicationDate}
-                genre={d.fields.genre}
-                image={d.fields.image.fields.file.url}
-                movie={movie}
-                displayShowDetails={true}
-                setMovie={setMovie}
-              />
-              {movie && (
-                <MovieDetails
-                  title={d.fields.title}
-                  rating={d.fields.rating}
-                  genre={d.fields.genre}
-                  description={d.fields.description}
-                  image={d.fields.image.fields.file.url}
-                  imageName={d.fields.image.fields.title}
+        {movies &&
+          movies.map((m) => {
+            return (
+              <swiper-slide
+                key={m.id}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <NewMovieCard
+                  title={m.title}
+                  publicationDate={m.publicationdate}
+                  genre={m.category}
+                  image={m.image}
+                  movie={movie}
+                  displayShowDetails={true}
+                  setMovie={setMovie}
                 />
-              )}
-            </swiper-slide>
-          );
-        })}
+                {movie && (
+                  <MovieDetails
+                    title={m.title}
+                    rating={m.rating}
+                    genre={m.category}
+                    description={m.description}
+                    image={m.image}
+                    cinemas={m.cinemas}
+                  />
+                )}
+              </swiper-slide>
+            );
+          })}
       </swiper-container>
     </div>
   );

@@ -1,31 +1,48 @@
 import "./styles/moviePrices.css";
 
-const MoviePrices = () => {
+const MoviePrices = ({ cinemas }) => {
+  console.log("test cinemas:", cinemas.CineStar);
+
   return (
     <div className="movie-price-container">
-      <h2>Where i can watch this movie?</h2>
+      <h2>Wo kann ich diesen Film anschauen?</h2>
       <div className="movie-price-details-container">
         <div>
-          <p>Where?</p>
+          <p>Wo?</p>
           <ul>
-            <li>Cinemax</li>
             <li>CineStar</li>
+            <li>CinemaxX</li>
             <li>Cineplex</li>
+            <li>UCI</li>
           </ul>
         </div>
         <div>
-          <p>Price</p>
+          <p>Preis</p>
           <ul>
-            <li>from 12.50$</li>
-            <li>from 15.00$</li>
-            <li>from 11.00$</li>
+            <li>
+              {cinemas.CineStar
+                ? `ab ${cinemas.CineStar} €`
+                : "Nicht verfügbar"}
+            </li>
+            <li>
+              {cinemas.CinemaxX
+                ? `ab ${cinemas.CinemaxX} €`
+                : "Nicht verfügbar"}
+            </li>
+            <li>
+              {cinemas.Cineplex
+                ? `ab ${cinemas.Cineplex} €`
+                : "Nicht verfügbar"}
+            </li>
+            <li>{cinemas.UCI ? `ab ${cinemas.UCI} €` : "Nicht verfügbar"}</li>
           </ul>
         </div>
         <div className="movie-price-ticket">
-          <p>Ticket</p>
-          <a href="#">Buy ticket now</a>
-          <a href="#">Buy ticket now</a>
-          <a href="#">Buy ticket now</a>
+          <p>Tickets</p>
+          <a href="https://www.cinestar.de/">Jetzt Tickets kaufen</a>
+          <a href="https://www.cinemaxx.de/">Jetzt Tickets kaufen</a>
+          <a href="https://www.cineplex.de/">Jetzt Tickets kaufen</a>
+          <a href="https://www.uci-kinowelt.de/">Jetzt Tickets kaufen</a>
         </div>
       </div>
     </div>

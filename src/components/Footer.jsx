@@ -16,13 +16,13 @@ const Footer = () => {
           alt="logo"
         />
         <div className="footer-about-us">
-          <h3>About us</h3>
+          <h3>Über uns</h3>
           <ul>
             <li>
-              <a href="#">Company</a>
+              <a href="#">Firma</a>
             </li>
             <li>
-              <a href="#">Data protection</a>
+              <a href="#">Datenschutz</a>
             </li>
             <li>
               <a href="#">Impressum</a>
@@ -30,7 +30,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-new">
-          <h3>New Movies</h3>
+          <h3>Neue Filme</h3>
           <ul>
             <li>
               <a href="#">Film 1</a>
@@ -44,16 +44,16 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-movie-categories">
-          <h3>Categories</h3>
+          <h3>Kategorien</h3>
           <ul>
             <li>
-              <a href="#">Action</a>
+              <a href="#Action">Action</a>
             </li>
             <li>
-              <a href="#">Fantasy</a>
+              <a href="#Fantasy">Fantasy</a>
             </li>
             <li>
-              <a href="#">Comedy</a>
+              <a href="#Komödie">Komödie</a>
             </li>
           </ul>
         </div>
@@ -83,7 +83,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p id="copyright">© 2023 Holy Film Gmgh + CO. KG</p>
+      <p id="copyright">© 2023 Holy Film GmbH & Co. KG</p>
     </footer>
   );
 };

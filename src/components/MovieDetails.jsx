@@ -10,13 +10,13 @@ const MovieDetails = ({
   genre,
   description,
   image,
-  imageName,
+  cinemas,
 }) => {
   const [price, setPrice] = useState(false);
   return (
     <div className="movie-details-container">
       <div className="movie-details-description-container">
-        <img src={image} alt={imageName} />
+        <img src={image} alt="test" />
         <div className="movie-details-text-container">
           <div className="movie-details-title-ratings">
             <h1>{title}</h1>
@@ -35,12 +35,14 @@ const MovieDetails = ({
               {genre.map((g) => g).join(", ")}
             </p>
           </div>
-          <p className="movie-details-description">Description:</p>
+          <p className="movie-details-description">Beschreibung:</p>
           <p className="movie-details-description-text">{description}</p>
-          <button onClick={() => setPrice(!price)}>See prices</button>
+          <button onClick={() => setPrice(!price)}>
+            Verfügbare Kinos ansehen
+          </button>
         </div>
       </div>
-      {price && <MoviePrices />}
+      {price && <MoviePrices cinemas={cinemas} />}
     </div>
   );
 };
