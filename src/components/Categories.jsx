@@ -3,42 +3,48 @@ import "./styles/categories.css";
 
 import CategoriesMovieCard from "./CategoriesMovieCard";
 
-const Categories = ({ data }) => {
+const Categories = ({ movies }) => {
   const [movie, setMovie] = useState(false);
 
   // Group movies by genre
-  const groupedMovies = data.reduce((acc, movie) => {
-    const genres = movie.fields.genre;
-    genres.forEach((genre) => {
-      if (!acc[genre]) {
-        acc[genre] = [];
-      }
-      acc[genre].push(movie);
-    });
 
-    return acc;
-  }, {});
+  let groupedMovies = [];
+
+  if (movies) {
+    groupedMovies = movies.reduce((acc, movie) => {
+      const categories = movie.category;
+      categories.forEach((categories) => {
+        if (!acc[categories]) {
+          acc[categories] = [];
+        }
+        acc[categories].push(movie);
+      });
+
+      return acc;
+    }, {});
+  }
 
   return (
     <div className="all-container">
       <div className="categories-container">
-        <h2 id="categories">Categories</h2>
-        {Object.entries(groupedMovies).map(([genre, movies]) => (
-          <div key={genre}>
-            <h3 className="genre-heading">{genre}</h3>
+        <h2 id="categories">Kategorien</h2>
+        {Object.entries(groupedMovies).map(([categories, movies]) => (
+          <div id={categories} key={categories}>
+            <h3 className="genre-heading">{categories}</h3>
             <div className="movies-container">
-              {movies.map((movie) => (
-                <div key={movie.sys.id}>
-                  <CategoriesMovieCard
-                    title={movie.fields.title}
-                    genre={movie.fields.genre}
-                    image={movie.fields.image.fields.file.url}
-                    movie={movie}
-                    setMovie={setMovie}
-                    rating={movie.fields.rating}
-                  />
-                </div>
-              ))}
+              {movies &&
+                movies.map((m) => (
+                  <div key={m.id}>
+                    <CategoriesMovieCard
+                      title={m.title}
+                      genre={m.categories}
+                      image={m.image}
+                      movie={m}
+                      setMovie={setMovie}
+                      rating={m.rating}
+                    />
+                  </div>
+                ))}
             </div>
           </div>
         ))}

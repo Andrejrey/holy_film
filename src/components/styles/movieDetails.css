@@ -35,7 +35,7 @@
   border: none;
   border-radius: 10px;
   background-color: #ffbf46;
-  width: 120px;
+  width: fit-content;
   padding: 10px;
   cursor: pointer;
 }

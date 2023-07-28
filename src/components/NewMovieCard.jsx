@@ -8,6 +8,11 @@ const NewMovieCard = ({
   displayGenres,
   setMovie,
 }) => {
+  const publicationDateFormated = publicationDate.split("T");
+  const publicationDateFormatedTwo = publicationDateFormated[0]
+    .split("-")
+    .reverse()
+    .join(".");
   return (
     <div
       style={{
@@ -50,7 +55,7 @@ const NewMovieCard = ({
           marginBottom: "0.25rem",
         }}
       >
-        Erscheinungsdatum: {publicationDate}
+        Erscheinungsdatum: {publicationDateFormatedTwo}
       </p>
       {displayGenres && (
         <p
