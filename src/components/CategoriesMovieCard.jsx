@@ -7,7 +7,7 @@ const CategoriesMovieCard = ({ title, image, rating }) => {
     <div className="movie-container">
       <img src={image} alt="Poster of the Movie" className="posterImage" />
       <h3 className="movie-title">{title}</h3>
-      <div>
+      <div className="movie-card-rating">
         {rating > 0 ? <StarIcon /> : <StarBorderIcon />}
         {rating > 1 ? <StarIcon /> : <StarBorderIcon />}
         {rating > 2 ? <StarIcon /> : <StarBorderIcon />}

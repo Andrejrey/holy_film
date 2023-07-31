@@ -13,10 +13,6 @@ import {
 } from "swiper/modules";
 import "swiper/css/navigation";
 
-import { register } from "swiper/element/bundle";
-// register Swiper custom elements
-register();
-
 const NewMoviesSlider = ({ movies, getDataForMovieDetails }) => {
   return (
     <Swiper

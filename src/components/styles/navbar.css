@@ -31,3 +31,8 @@
   color: #fff;
   font-size: 20px;
 }
+
+.home-link {
+  text-decoration: none;
+  color: white;
+}
