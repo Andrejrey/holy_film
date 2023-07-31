@@ -1,12 +1,15 @@
+import "./styles/movieDetails.css";
+import { useState } from "react";
+import MovieDetails from "./MovieDetails";
+import { Link, Route, useParams } from "react-router-dom";
+
 const NewMovieCard = ({
+  id,
   title,
   publicationDate,
   genre,
   image,
-  movie,
-  displayShowDetails,
   displayGenres,
-  setMovie,
 }) => {
   const publicationDateFormated = publicationDate.split("T");
   const publicationDateFormatedTwo = publicationDateFormated[0]
@@ -14,83 +17,22 @@ const NewMovieCard = ({
     .reverse()
     .join(".");
   return (
-    <div
-      style={{
-        width: "400px",
-        backgroundColor: "#575761",
-        border: "none",
-        borderRadius: "20px",
-        boxShadow: "7px 7px 10px 0px rgba(87, 87, 87, 0.75)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        marginBottom: "1rem",
-      }}
-    >
-      <img
-        src={image}
-        alt="Poster of the Movie"
-        className="carImage"
-        style={{
-          width: `400px`,
-          heigth: `600px`,
-          borderRadius: "20px 20px 0px 0px",
-        }}
-      />
-      <h3
-        style={{
-          color: "white",
-          textAlign: "center",
-          fontSize: "1.5rem",
-          margin: "0.5rem 0rem",
-        }}
-      >
-        {title}
-      </h3>
-      <p
-        style={{
-          color: "white",
-          fontSize: "1rem",
-          textAlign: "center",
-          marginBottom: "0.25rem",
-        }}
-      >
-        Erscheinungsdatum: {publicationDateFormatedTwo}
-      </p>
-      {displayGenres && (
-        <p
-          style={{
-            color: "white",
-            fontSize: "1rem",
-            textAlign: "center",
-            marginBottom: "0.25rem",
-            display: "flex",
-            flexWrap: "wrap",
-          }}
-        >
-          Genre: {genre.map((g) => g).join(", ")}
-        </p>
-      )}
-      {displayShowDetails && (
-        <button
-          style={{
-            width: "fit-content",
-            fontWeight: "bold",
-            fontSize: "1rem",
-            border: "none",
-            borderRadius: "10px",
-            backgroundColor: "#ffbf46",
-            color: "white",
-            padding: "6px 12px",
-            cursor: "pointer",
-            margin: "1rem 0rem",
-          }}
-          onClick={() => setMovie(!movie)}
-        >
+    <>
+      <div className="new-movie-card-container">
+        <img src={image} alt="Poster of the Movie" className="carImage" />
+        <h3>{title}</h3>
+        <p>Erscheinungsdatum: {publicationDateFormatedTwo}</p>
+        {displayGenres && (
+          <p id="new.movie.card.genre.p">
+            Genre: {genre.map((g) => g).join(", ")}
+          </p>
+        )}
+
+        <Link className="link-test" to={`movie_details/${id}`}>
           Mehr erfahren
-        </button>
-      )}
-    </div>
+        </Link>
+      </div>
+    </>
   );
 };
 
