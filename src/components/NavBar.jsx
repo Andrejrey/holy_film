@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
@@ -22,8 +23,10 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navbar-nav ms-auto">
-              <Nav.Link href="/" to="/">
-                Home
+              <Nav.Link>
+                <Link to="/" class="home-link">
+                  Home
+                </Link>
               </Nav.Link>
               <Nav.Link href="#newMovies-container" to="/new-movies">
                 Neue Filme

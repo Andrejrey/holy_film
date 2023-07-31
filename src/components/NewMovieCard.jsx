@@ -1,7 +1,5 @@
 import "./styles/movieDetails.css";
-import { useState } from "react";
-import MovieDetails from "./MovieDetails";
-import { Link, Route, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const NewMovieCard = ({
   id,
