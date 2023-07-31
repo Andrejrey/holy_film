@@ -1,30 +1,30 @@
 .movie-container {
-    width: 225px;
-    background-color: #575761;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 7px 7px 10px 0px rgba(87, 87, 87, 0.75);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
+  width: 225px;
+  background-color: #575761;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 7px 7px 10px 0px rgba(87, 87, 87, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .posterImage {
-    width: 225px;
-    height: 300px;
-    border-radius: 20px 20px 0px 0px;
+  width: 225px;
+  height: 300px;
+  border-radius: 20px 20px 0px 0px;
 }
 
 .movie-title {
-    color: white;
-    text-align: center;
-    font-size: 0.9rem;
-    margin: 0.5rem 0rem;
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 0.5rem 0rem;
 }
 
 .MuiSvgIcon-root {
-    color: #ffbf46;
-    font-size: 36px;
-    margin-bottom: 0.4rem;
+  color: #ffbf46;
+  font-size: 36px;
+  margin-bottom: 0.4rem;
 }

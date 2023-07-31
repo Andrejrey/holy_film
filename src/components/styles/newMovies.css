@@ -61,7 +61,3 @@
 .carouselItem button:hover {
   background-color: #8acb88;
 }
-
-.swiper-pagination {
-  position: relative;
-}

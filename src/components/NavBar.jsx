@@ -22,7 +22,7 @@ const NavBar = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="navbar-nav ms-auto">
-              <Nav.Link href="#headerContainer" to="/">
+              <Nav.Link href="/" to="/">
                 Home
               </Nav.Link>
               <Nav.Link href="#newMovies-container" to="/new-movies">

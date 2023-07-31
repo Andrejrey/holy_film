@@ -1,8 +1,6 @@
 import "./styles/moviePrices.css";
 
 const MoviePrices = ({ cinemas }) => {
-  console.log("test cinemas:", cinemas.CineStar);
-
   return (
     <div className="movie-price-container">
       <h2>Wo kann ich diesen Film anschauen?</h2>
